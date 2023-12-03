@@ -1,7 +1,7 @@
-all: secuencial
+all: openmp
 
-secuencial: secuencial.cpp
-    g++ -std=c++11 -o secuencial secuencial.cpp `pkg-config --cflags --libs opencv`
+openmp: openmp.cpp
+    g++ -std=c++11 -fopenmp -o openmp openmp.cpp `pkg-config --cflags --libs opencv`
 
 clean:
-    rm -f secuencial
+    rm -f openmp
